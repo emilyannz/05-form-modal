@@ -3,4 +3,80 @@
 
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
+$gutter: 2rem;
+$card-background: #0040ff;
+$input-color: #f00;
+$label-color: #0f0;
+$brand-border: 0.2rem solid #dcd;
+$brand-shadow: 0.2rem 0.2rem #ff0;
+$background-haze: rgba(0, 0, 0, 0.8);
+
 @import 'box-sizing';
+@import 'base';
+@import 'grid';
+
+.card {
+  min-width: 100vw;
+  background-color: $card-background;
+  box-shadow: $brand-shadow;
+}
+
+.call-title {
+  padding-top: .5em;
+  padding-bottom: 2em;
+  padding-left: .5em;
+  color: $input-color;
+}
+
+.log-call {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.log-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 $gutter;
+  padding-bottom: 3em;
+}
+
+.log-item__label {
+  color: $label-color;
+  font-family: serif;
+}
+
+.log-item__input {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: $brand-border;
+  border-left: 0;
+  background: none;
+  font-family: sans-serif;
+  font-size: large;
+
+  &::-webkit-input-placeholder {
+    color: $input-color;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: $brand-border;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+}
+
+.save-button {
+  font-size: 1rem;
+  border: 0;
+  border-radius: 0.2rem;
+  margin-top: 1em;
+  margin-right: 2em;
+  margin-bottom: 1em;
+  padding: 1em;
+}
